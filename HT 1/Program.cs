@@ -4,7 +4,7 @@ using HT_1.Services.Implementations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
- 
+
 namespace HT_1;
 
 internal class Program
