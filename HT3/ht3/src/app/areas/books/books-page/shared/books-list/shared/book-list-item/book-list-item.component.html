@@ -1,0 +1,39 @@
+<div class="book-list-item">
+    <div>
+        <img [src]="model.cover"/>
+    </div>
+    <div class="mx-2">
+        <div>{{ model.title }}</div>
+        <div>
+            <div>{{ 'TEXT.REVIEW' | translate }}</div>
+            <div>{{ model.reviewsNumber }}</div>
+            <div>{{ 'TEXT.RATING' | translate }}</div>
+            <div>{{ model.rating }}</div>
+        </div>
+    </div>
+    <div>
+        <button (click)="onView()">{{ 'TEXT.VIEW' | translate }}</button>
+        <button (click)="onEdit()">{{ 'TEXT.EDIT' | translate }}</button>
+    </div>
+</div>
+
+<app-modal *ngIf="showDetails" (closeModalEvent)="closeDetails()">
+    <ng-template #header>
+        {{ 'TEXT.DETAILS' | translate }}
+    </ng-template>
+    <ng-template #body>
+        <app-book-details
+            [model]="bookDetails$ | async"></app-book-details>
+    </ng-template>
+</app-modal>
+
+<app-modal *ngIf="showEdit" (closeModalEvent)="closeEdit()">
+    <ng-template #header>
+        {{ 'TEXT.DETAILS' | translate }}
+    </ng-template>
+    <ng-template #body>
+        <app-book-form
+            [model]="bookDetails$ | async"
+            (commitEvent)="onEditBook($event)"></app-book-form>
+    </ng-template>
+</app-modal>

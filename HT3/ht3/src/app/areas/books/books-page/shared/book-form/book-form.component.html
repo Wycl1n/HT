@@ -1,0 +1,27 @@
+<div class="book-block">
+    <span>{{ (model ? 'TEXT.EDIT_BOOK' : 'TEXT.ADD_BOOK') | translate }}</span>
+    <hr>
+    <form [formGroup]="bookForm" class="book-form">
+        <div class="book-form-labels">
+            <div>{{ 'ENTITY.BOOK.TITLE' | translate }}</div>
+            <div>{{ 'ENTITY.BOOK.COVER' | translate }}</div>
+            <div>{{ 'ENTITY.BOOK.GENRE' | translate }}</div>
+            <div>{{ 'ENTITY.BOOK.AUTHOR' | translate }}</div>
+        </div>
+        <div class="book-form-inputs">
+            <input type="text" formControlName="title">
+            <input type="file" [id]="'fileInput'" (change)="handleUpload($event)">
+            <input type="text" formControlName="genre">
+            <input type="text" formControlName="author">
+        </div>
+        <div class="book-form-labels">{{ 'ENTITY.BOOK.CONTENT' | translate }}</div>
+        <textarea style="resize: none;" formControlName="content"></textarea>
+    </form>
+    <div [ngClass]="isValid ? 'hidden' : ''" class="error">
+        {{ 'TEXT.SOME_ERRORS' | translate }}
+    </div>
+    <div class="book-buttons">
+        <button class="commit-button" (click)="onCommit()">{{ (model ? 'BUTTONS.EDIT' : 'BUTTONS.ADD') | translate }}</button>
+        <button class="clear-button" (click)="onClear()">{{ 'BUTTONS.CLEAR' | translate }}</button>
+    </div>
+</div>

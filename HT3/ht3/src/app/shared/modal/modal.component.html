@@ -1,0 +1,12 @@
+<div class="modal-bg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <ng-container [ngTemplateOutlet]="header"></ng-container>
+            <button class="close-button" (click)="closeModal()">{{ 'BUTTONS.CLOSE' | translate }}</button>
+        </div>
+        <hr>
+        <div>
+            <ng-container [ngTemplateOutlet]="body"></ng-container>
+        </div>
+    </div>
+</div>
