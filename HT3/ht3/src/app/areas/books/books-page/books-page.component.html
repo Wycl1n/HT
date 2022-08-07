@@ -1,0 +1,17 @@
+<div class="page">
+    <div>
+        <app-book-form (commitEvent)="onBookAdd($event)"></app-book-form>
+    </div>
+    <div class="mt-4">
+        <div>
+            <button (click)="selectTab(bookListTabsEnum.All)">{{ 'TEXT.ALL' | translate }}</button>
+            <button (click)="selectTab(bookListTabsEnum.Recommended)">{{ 'TEXT.RECOMMENDED' | translate }}</button>
+        </div>
+        <div class="buttons">
+            <app-books-list *ngIf="listTab === bookListTabsEnum.All"
+                [booksList]="allBooks$ | async"></app-books-list>
+            <app-books-list *ngIf="listTab === bookListTabsEnum.Recommended"
+                [booksList]="recommendedBooks$ | async"></app-books-list>
+        </div>
+    </div>
+</div>

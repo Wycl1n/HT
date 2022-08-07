@@ -1,0 +1,22 @@
+<div *ngIf="model" class="book-detail">
+    <div class="book-info">
+        <div>
+            <img class="cover" [src]="model.cover"/>
+            <div class="staticstics">
+                <span>{{ 'ENTITY.BOOK.RATING' | translate }}: {{ model.rating }}</span>
+                <span>{{ 'ENTITY.BOOK.REVIEWS' | translate }}: {{ model.reviews | getCount }}</span>
+            </div>
+        </div>
+        <div>
+            <h5>{{ model.title }}</h5>
+            <h6>{{ model.author }}, {{ model.genre }}</h6>
+            <div class="book-content">
+                {{ model.content }}
+            </div>
+        </div>
+    </div>
+    <div class="reviews-list">
+        <app-reviews-list
+            [reviews]="model.reviews"></app-reviews-list>
+    </div>
+</div>

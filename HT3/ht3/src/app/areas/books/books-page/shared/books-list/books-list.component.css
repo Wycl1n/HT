@@ -1,0 +1,12 @@
+.list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+
+    border: 1px solid black;
+
+    padding: 1%;
+
+    max-height: 600px;
+    overflow: auto;
+}

@@ -1,0 +1,45 @@
+.book-block {
+    border: 1px solid black;
+    border-radius: 5px;
+
+    padding: 20px;
+}
+
+.book-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    gap: 30px;
+}
+
+.book-form-labels {
+    display: grid;
+    gap: 10px;
+    text-align: right;
+}
+
+.book-form-inputs {
+    display: grid;
+    grid-template-columns: 1;
+    gap: 10px;
+    width: 70%;
+    min-width: 220px;
+}
+.book-buttons {
+    display: grid;
+    grid-template-columns: 10fr 1fr 0.2fr 1fr 10fr;
+}
+.commit-button {
+    grid-column: 2;
+}
+.clear-button {
+    grid-column: 4;
+}
+
+.error {
+    text-align: center;
+    color: brown;
+}
+
+.hidden {
+    visibility: hidden;
+}

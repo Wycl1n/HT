@@ -1,0 +1,32 @@
+{
+    "BUTTONS": {
+        "ADD": "Add",
+        "CLEAR": "Clear",
+        "CLOSE": "Close",
+        "EDIT": "Edit"
+    },
+    "ENTITY": {
+        "BOOK": {
+            "AUTHOR": "Author",
+            "CONTENT": "Content",
+            "COVER": "Cover",
+            "GENRE": "Genre",
+            "TITLE": "Title",
+            "RATING": "Rating",
+            "REVIEWS": "Reviews"
+        }
+    },
+    "TEXT": {
+        "ADD_BOOK": "Add book",
+        "ALL": "All",
+        "DETAILS": "Details",
+        "EDIT": "Edit",
+        "EDIT_BOOK": "Edit book",
+        "LIBRARY": "Library",
+        "RATING": "Rating",
+        "RECOMMENDED": "Recommended",
+        "REVIEW": "Review",
+        "SOME_ERRORS": "Some errors",
+        "VIEW": "View"
+    }
+}

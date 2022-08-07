@@ -1,0 +1,6 @@
+.book-list-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    border: 1px solid black;
+}
